@@ -1,8 +1,8 @@
 <?php
 
-class block_myblockexample extends block_base {
+class block_yourblockname extends block_base {
     public function init() {
-        $this->title = get_string('pluginname', 'block_myblockexample');
+        $this->title = get_string('pluginname', 'block_yourblockname');
     }
 
     public function get_content() {
@@ -10,10 +10,16 @@ class block_myblockexample extends block_base {
             return $this->content;
         }
 
-        $this->content = new stdClass();
-        $this->content->text = 'The content of your block goes here.';
-        $this->content->footer = 'Footer text here';
+        $this->content = new stdClass;
+        $this->content->text = $this->get_agenda_content();
+        $this->content->footer = 'Block footer';
 
         return $this->content;
+    }
+
+    private function get_agenda_content() {
+        // Hier kun je de logica toevoegen om de agenda-inhoud te genereren
+        $agenda_content = 'Agenda content goes here';
+        return $agenda_content;
     }
 }

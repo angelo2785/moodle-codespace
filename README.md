@@ -18,7 +18,8 @@ Get started
 8. If you got the permission issue run this command below on codespace terminal and re-run again.
     ```shell
 
-    sh .devcontainer/scripts/fixmoodleowner.sh
+
+    
 
     ```
 9. Start your plugin development.
